@@ -31,8 +31,13 @@ export default function RootLayout({
       >
         <SidebarProvider>
           <GlobalSidebar />
-          <SidebarTrigger />
-          <div className="w-screen h-screen">{children}</div>
+          <div className="flex flex-col w-100 flex-1">
+            <header className="flex justify-around items-center h-fit bg-accent px-2 py-1">
+              <SidebarTrigger />
+              <span className="mx-auto">Logo</span>
+            </header>
+            {children}
+          </div>
         </SidebarProvider>
       </body>
     </html>
